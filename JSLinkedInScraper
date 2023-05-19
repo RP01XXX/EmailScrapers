@@ -15,3 +15,16 @@
     textList += profileTitles[i].innerText + '\n';
     }
     console.log(textList);
+
+
+If you use the other option of looking at the employees specifically, use this in the console, how do I get it to iterate?
+var spanElements = document.querySelectorAll('span[dir="ltr"] > span[aria-hidden="true"]');
+
+var data = [];
+
+for (var i = 0; i < spanElements.length; i++) {
+  var text = spanElements[i].textContent.trim();
+  data.push(text);
+}
+
+console.log(data);
